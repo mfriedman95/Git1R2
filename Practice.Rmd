@@ -21,6 +21,19 @@ df <- as.data.frame(cbind(x, y))
 plot(df$x, df$y)
 ```
 
+#add my own data to rmd file
+```{r}
+sample <- read.csv("growth measurements.csv")
+
+sample_lm <- lm(Bud_growth ~ Species*Light, data = sample)
+sample_anova <- anova(sample_lm)
+sample_lm_output <- summary(sample_lm)
+
+sample_anova
+sample_lm_output
+```
+
+
 ## Including Plots
 
 You can also embed plots, for example:
