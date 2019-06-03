@@ -1,0 +1,32 @@
+---
+title: "Practice 1"
+author: "Michael Friedman"
+date: "6/3/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+```
+
+
+```{r}
+x <- seq(1, 10, 1)
+y <- seq(1, 50, 5)
+
+df <- as.data.frame(cbind(x, y))
+
+plot(df$x, df$y)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
