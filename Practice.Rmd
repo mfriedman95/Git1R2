@@ -41,4 +41,12 @@ test_anova<- anova(test_lm)
 test_lm_output<- summary(test_lm)
 
 test_lm_output
+
+#make a plot of data
+ggplot(data = test, aes(x = Site, y = Count, color = Year)) +
+  geom_point(aes(x = Site, y = Count, color = Year), position = 'jitter') +
+  geom_boxplot(aes(x = Site, y = Count), alpha = 0.5)
+
+#save plot
+ggsave("Molly_testdata.jpeg", plot = last_plot(), device = jpeg())
 ```
