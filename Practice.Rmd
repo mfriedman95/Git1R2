@@ -33,13 +33,12 @@ sample_anova
 sample_lm_output
 ```
 
+#add more data to rmd file
+```{r}
+test <- read.csv("test_data.csv")
+test_lm<- lm(Count ~ Year*Site, data = test) 
+test_anova<- anova(test_lm)
+test_lm_output<- summary(test_lm)
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+test_lm_output
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
